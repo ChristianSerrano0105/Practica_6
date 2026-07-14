@@ -30,4 +30,9 @@ public class LinkedList<E> implements Lista<E>{
     private Nodo<E> primero = null;
     private Nodo<E> ultimo = null;
     private Nodo<E> tamanio=0;
+
+    @Override
+    public void agregarElemento(E e){
+        agregarFinal(e);
+    }
 }
