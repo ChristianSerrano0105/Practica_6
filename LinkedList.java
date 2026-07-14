@@ -152,5 +152,18 @@ public class LinkedList<E> implements Lista<E>{
         ultimo = null;
         tamanio = 0;
     }
+
+    @Override
+    public E consultar(int posicion){
+        if (posicion < 0 || posicion >= tamanio) {
+            throw new IndexOutOfBoundsException();
+        }
+        Nodo<E> actual = primero;
+        for(int i = 0; i < posicion; i++){
+            actual = actual.getSiguiente();
+        }
+        return actual.getInfo();
+    }
+
     
 }
