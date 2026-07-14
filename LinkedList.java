@@ -23,7 +23,7 @@ public class LinkedList<E> implements Lista<E>{
         }
 
         public void setInfo(E info){
-            this.info= info;
+            this.info = info;
         }
     }
 
@@ -121,7 +121,7 @@ public class LinkedList<E> implements Lista<E>{
         if (posicion < 0 || posicion >= tamanio) {
             throw new IndexOutOfBoundsException();
         }
-        if(posicion == 0 ) return eliminarElementoInicio():
+        if(posicion == 0 ) return eliminarElementoInicio();
         if(posicion == tamanio - 1) return eliminarElementoFinal();
 
         Nodo<E> actual = primero;

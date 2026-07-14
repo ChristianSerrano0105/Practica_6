@@ -2,8 +2,9 @@ public class App {
 
     public static void main(String[] args) {
 
-        Lista<Integer> lista = new ArrayList<>();
-
+        //Lista<Integer> lista = new ArrayList<>();
+        Lista<Integer> lista = new LinkedList<>();
+        
         System.out.println("===== LISTA RECIEN CREADA =====");
         System.out.println("¿Está vacía? " + lista.esVacia()); 
         System.out.println("Elementos: " + lista.numElementos());
