@@ -60,5 +60,24 @@ public class LinkedList<E> implements Lista<E>{
         tamanio++;
     }
 
+    @Override
+    public void agregarPosicion(E e, int posicion){
+        if (posicion < 0 || posicion > tamanio) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (posicion == 0) {
+            agregarInicio(e);
+        } else if (posicion == tamanio) {
+            agregarFinal(e);
+        } else {
+            Nodo<E> actual = primero;
+            for(int i = 0; i < posicion - 1; i++){
+                actual = actual.getSiguiente();
+            }
+            Nodo<E> aux= new Nodo<>(actual.getSiguiente(), e);
+            actual.setSiguiente(aux);
+            tamanio++;
+        }
+    }
     
 }
