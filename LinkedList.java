@@ -116,5 +116,25 @@ public class LinkedList<E> implements Lista<E>{
         return infoEliminada;
     }
 
+    @Override
+    public E eliminarElementoPosicion(int posicion){
+        if (posicion < 0 || posicion >= tamanio) {
+            throw new IndexOutOfBoundsException();
+        }
+        if(posicion == 0 ) return eliminarElementoInicio():
+        if(posicion == tamanio - 1) return eliminarElementoFinal();
+
+        Nodo<E> actual = primero;
+        for(int i = 0; i < posicion - 1; i++){
+            actual = actual.getSiguiente();
+        }
+
+        Nodo<E> aEliminar = actual.getSiguiente();
+        E infoEliminada = aEliminar.getInfo();
+        actual.setSiguiente(aEliminar.getSiguiente());
+        tamanio--;
+        return infoEliminada;
+    }
+
     
 }
