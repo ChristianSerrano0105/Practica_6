@@ -145,5 +145,12 @@ public class LinkedList<E> implements Lista<E>{
     public int numElementos(){
         return tamanio;
     }
+
+    @Override
+    public void limpiarLista(){
+        primero = null;
+        ultimo = null;
+        tamanio = 0;
+    }
     
 }
