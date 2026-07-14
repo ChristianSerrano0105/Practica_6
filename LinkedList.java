@@ -165,5 +165,20 @@ public class LinkedList<E> implements Lista<E>{
         return actual.getInfo();
     }
 
-    
+    @Override
+    public Iterator<E> iterator(){
+        return new Iterator<E>(){
+            Nodo<E> nodo = primero;
+            @Override
+            public boolean hasNext(){
+                return nodo != null;
+            }
+            @Override
+            public E next(){
+                E tmp = nodo.getInfo();
+                nodo=nodo.getSiguiente();
+                return tmp;
+            }
+        };
+    }
 }
