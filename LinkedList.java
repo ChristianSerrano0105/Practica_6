@@ -47,5 +47,18 @@ public class LinkedList<E> implements Lista<E>{
         tamanio++;
     }
 
+    @Override
+    public void agregarFinal(E e){
+        Nodo<E> aux = new Nodo<>(null, e);
+        if (esVacia()) {
+            primero = aux;
+            ultimo = aux;
+        } else{
+            ultimo.setSiguiente(aux);
+            ultimo = aux;
+        }
+        tamanio++;
+    }
+
     
 }
