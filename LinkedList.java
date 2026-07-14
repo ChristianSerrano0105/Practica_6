@@ -136,5 +136,14 @@ public class LinkedList<E> implements Lista<E>{
         return infoEliminada;
     }
 
+    @Override
+    public boolean esVacia(){
+        return tamanio==0;
+    }
+
+    @Override
+    public int numElementos(){
+        return tamanio;
+    }
     
 }
