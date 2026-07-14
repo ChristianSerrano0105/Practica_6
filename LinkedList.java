@@ -97,5 +97,24 @@ public class LinkedList<E> implements Lista<E>{
         return infoEliminada;           
     }
 
+    @Override
+    public E eliminarElementoFinal(){
+        if (esVacia()) return null;
+        E infoEliminada = ultimo.getInfo();
+        if (primero == ultimo) {
+            primero = null;
+            ultimo = null;
+        } else {
+            Nodo<E> actual = primero;
+            while (actual.getSiguiente() != ultimo) {
+                actual = actual.getSiguiente();
+            }
+            actual.setSiguiente(null);
+            ultimo = actual;
+        }
+        tamanio--;
+        return infoEliminada;
+    }
+
     
 }
