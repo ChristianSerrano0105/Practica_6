@@ -29,10 +29,23 @@ public class LinkedList<E> implements Lista<E>{
 
     private Nodo<E> primero = null;
     private Nodo<E> ultimo = null;
-    private Nodo<E> tamanio=0;
+    private int tamanio=0;
 
     @Override
     public void agregarElemento(E e){
         agregarFinal(e);
     }
+
+    @Override
+    public void agregarInicio(E e){
+        
+        Nodo<E> aux = new Nodo<> (primero, e);
+        primero = aux;
+        if(ultimo == null){
+            ultimo = primero;
+        }
+        tamanio++;
+    }
+
+    
 }
