@@ -79,5 +79,11 @@ public class LinkedList<E> implements Lista<E>{
             tamanio++;
         }
     }
+
+    @Override
+    public E eliminarElemento(){
+        return eliminarElementoFinal();
+    }
+
     
 }
